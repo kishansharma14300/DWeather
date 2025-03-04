@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout_MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/color_gradient"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+
+    android:orientation="vertical"
+    tools:context=".Activity.MainActivity"
+    tools:openDrawer="end">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+
+                android:layout_height="match_parent"
+
+                android:gravity="center_vertical">
+
+
+                <Button
+                    android:id="@+id/btnInsertedItem_mainActivity"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/normalPadding"
+                    android:background="@mipmap/btn_drawer" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.2"
+
+                android:gravity="center"
+                android:padding="@dimen/normalPadding">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/rounded_corner_edittext"
+                    android:ems="10"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionDone"
+                    android:padding="10dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+
+                <Button
+                    android:id="@+id/btnGpsLocation_MainActivity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:layout_marginRight="@dimen/normalPadding"
+                    android:background="@drawable/current_location" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/linearLayout2"-->
+                    <!--android:layout_width="wrap_content"-->
+
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:layout_marginBottom="8dp"-->
+                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toTopOf="parent">-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:padding="@dimen/normalPadding"-->
+                    <!--android:text="F°"-->
+                    <!--android:textSize="30sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                    <!--<com.suke.widget.SwitchButton-->
+                    <!--android:id="@+id/swCelciusFernhit_Navigation_mainActivity"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:padding="@dimen/normalPadding"-->
+                    <!--app:sb_checked="true"-->
+                    <!--app:sb_checkline_color="@color/colorPrimary" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:gravity="center"-->
+                    <!--android:padding="@dimen/normalPadding"-->
+                    <!--android:text="C°"-->
+                    <!--android:textAlignment="center"-->
+
+                    <!--android:textSize="30sp"-->
+                    <!--android:textStyle="bold" />-->
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvCurrentLocation_MainActivity"
+                        android:layout_width="58dp"
+                        android:layout_height="27dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Rajkot"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColor"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.varunest.sparkbutton.SparkButton
+                        android:id="@+id/spark_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/tvCurrentLocation_MainActivity"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sparkbutton_activeImage="@mipmap/btn_like"
+                        app:sparkbutton_iconSize="40dp"
+                        app:sparkbutton_inActiveImage="@mipmap/btn_not_like" />
+
+                    <!--<com.like.LikeButton-->
+                    <!--android:id="@+id/btnLike_mainActivity"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:layout_marginEnd="8dp"-->
+
+                    <!--app:like_drawable="@drawable/star_on"-->
+                    <!--app:unlike_drawable="@drawable/star_off"-->
+                    <!--android:layout_marginBottom="8dp"-->
+                    <!--app:icon_size="25dp"-->
+                    <!--app:icon_type="star"-->
+                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--app:layout_constraintEnd_toEndOf="@+id/linearLayout"-->
+                    <!--app:layout_constraintHorizontal_bias="0.578"-->
+                    <!--app:layout_constraintStart_toEndOf="@+id/tvCurrentLocation_MainActivity"-->
+                    <!--app:layout_constraintTop_toTopOf="parent" />-->
+                </android.support.constraint.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normalPadding"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivCurrentWeather_MainActivity"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvLowTemp_mainActivity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.5"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="25dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvCurrentTemp_mainActivity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/md_white_1000"
+                                android:textAlignment="center"
+                                android:textSize="90dp" />
+
+                            <TextView
+                                android:id="@+id/tvCondition_MainActivity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvHighTemp_mainActivity"
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.5"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/md_yellow_200"
+                            android:textSize="25dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvDayForcasting_mainActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/normalPadding"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chances of Rain"
+                            style="@style/dashboard_Information"
+                             />
+
+                        <TextView
+                            android:id="@+id/tvChancesOfRain_MainAcitvity"
+                            style="@style/details_of_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/normalPadding"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Humidity"
+                            style="@style/dashboard_Information"
+
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tvHumidity_MainAcitvity"
+
+                            style="@style/details_of_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/normalPadding"
+
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sunrise"
+                            style="@style/dashboard_Information"
+
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tvSunrise_MainAcitvity"
+
+                            style="@style/details_of_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/normalPadding"
+
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/dashboard_Information"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sunset"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tvSunset_MainAcitvity"
+
+                            style="@style/details_of_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/normalPadding"
+
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/dashboard_Information"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wind"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tvWind_MainAcitvity"
+
+                            style="@style/details_of_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/normalPadding"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/dashboard_Information"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Visibility"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tvVisibility_MainAcitvity"
+
+                            style="@style/details_of_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/normalPadding"
+
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pressure"
+                            style="@style/dashboard_Information"
+
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tvPressure_MainAcitvity"
+
+                            style="@style/details_of_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/normalPadding"
+
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Clouds"
+                            style="@style/dashboard_Information"
+
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tvClouds_MainAcitvity"
+
+                            style="@style/details_of_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<android.support.constraint.ConstraintLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!---->
+
+            <!---->
+
+
+            <!--<ImageView-->
+            <!--android:id="@+id/imageView4"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:src="@drawable/menu"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/tvCurrentLocation_MainActivity" />-->
+
+
+            <!--android:paddingStart="@dimen/normalPadding"-->
+            <!--android:text="30°"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textSize="60sp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/ivCurrentWeather_MainActivity" />-->
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/tvWeatherCondition_MainActivity"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="3dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:text="Clear Sky"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.498"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/tvCurrentTemp_mainActivity" />-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/linearLayout2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="56dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/tvWeatherCondition_MainActivity">-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="@dimen/normalPadding"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="end">-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/linearLayout"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="55dp"-->
+            <!--android:background="@color/textColor"-->
+            <!--android:orientation="horizontal" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tvLowTemp_mainActivity"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="27dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:fontFamily="serif-monospace"-->
+            <!--android:text="↓16"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="20sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tvHighTemp_mainActivity"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="20dp"-->
+
+            <!--android:fontFamily="serif-monospace"-->
+            <!--android:text="↑35"-->
+            <!--android:textSize="20sp" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/normalPadding"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="start">-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="55dp"-->
+            <!--android:background="@color/textColor"-->
+            <!--android:orientation="horizontal" />-->
+            <!--</LinearLayout>-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent">-->
+            <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+            <!--</LinearLayout>-->
+
+            <!--</android.support.constraint.ConstraintLayout>-->
+
+
+        </ScrollView>
+
+
+        <!--<com.github.tianma8023.ssv.SunriseSunsetView-->
+        <!--android:id="@+id/ssv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:padding="@dimen/normalPadding"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:ssv_label_text_color="@color/colorAccent"-->
+        <!--app:ssv_label_text_size="16sp"-->
+        <!--app:ssv_shadow_color="#90EE90"-->
+        <!--app:ssv_sun_color="#FFC200"-->
+        <!--app:ssv_sun_radius="10dp"-->
+        <!--app:ssv_track_color="#008080"-->
+        <!--app:ssv_track_width="1.5dp" />-->
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navVIew_mainAcitivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+
+        app:headerLayout="@layout/nav_header"
+
+        app:menu="@menu/activity_dashboard_drawer"
+        app:itemTextColor="@color/colorAccent">
+
+    </android.support.design.widget.NavigationView>
+    <!--<android.support.design.widget.NavigationView-->
+    <!--android:id="@+id/nav_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="start"-->
+    <!--android:fitsSystemWindows="true"-->
+    <!--app:itemTextColor="@color/md_green_300"-->
+    <!--app:itemIconTint="@color/colorAccent"-->
+    <!--app:menu="@menu/activity_dashboard_drawer" />-->
+
+</android.support.v4.widget.DrawerLayout>

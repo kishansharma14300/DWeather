@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mainDayColor"
+    android:layout_height="match_parent"
+    tools:context=".Activity.LikedCityListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.2"
+
+        android:gravity="center"
+        android:padding="@dimen/normalPadding">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_corner_edittext"
+            android:ems="10"
+            android:imeOptions="actionDone"
+            android:padding="10dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="end"
+        android:layout_height="@android:dimen/notification_large_icon_height">
+        <!--<Button-->
+            <!--android:id="@+id/btn_addCity_mainAcitivty"-->
+            <!--android:layout_margin="@dimen/normalPadding"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:background="@drawable/plus"-->
+            <!--android:layout_height="50dp" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_LikedCityActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>
